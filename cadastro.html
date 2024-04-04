@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./cadastro.css" media="screen" />
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-title">
+            <h1>Atividade</h1>
+        </div>
+        <form class="container-task">
+            <div  style="background-color:#212529; padding: 1rem;" class="nes-field is-inline">
+                <label for="dark_field" style="color:#fff;">Atividade</label>
+                <input id="ativ" type="text" id="dark_field" class="nes-input is-dark">
+            </div>
+            <div style="background-color:#212529; padding: 1rem;" class="nes-field is-inline">
+                <label for="dark_field" style="color:#fff;">Descrição</label>
+                <input id="desc" type="text" id="dark_field" class="nes-input is-dark">
+            </div>
+            <div  style="background-color:#212529; padding: 1rem;" class="nes-field is-inline">
+                <label for="dark_field" style="color:#fff;">Data de entrega</label>
+                <input id="date" type="date" id="dark_field" class="nes-input is-dark">
+            </div>
+            <div class="Cadastrar_btns">
+                <a type="button" class="nes-btn is-primary" onclick="btn()">Cadastrar</a>
+                <a type="button" class="nes-btn is-error">Cancelar</a>
+            </div>
+        </form>
+        <a href="./index.html" type="button" class="nes-btn is-error btn-title">voltar</a>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
