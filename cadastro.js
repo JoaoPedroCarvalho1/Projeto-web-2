@@ -14,14 +14,12 @@ function validar(cadastro) {
     if (cadastro.ativ === "" || cadastro.desc === "" || cadastro.date === "") {
         alert("preencha todos os campos !")
     } else {
-        if (Array_Ativ.length == 0) {
             console.log(Array_Ativ.length)
             const cadastro_atividade = new atividade(cadastro.ativ, cadastro.desc, cadastro.date)
             Array_Ativ.push(cadastro_atividade);
             const Array_Json = JSON.stringify(Array_Ativ);
             console.log(Array_Json);
             localStorage.setItem("Atividade", Array_Json);
-        }
     }
 }
 
