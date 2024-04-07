@@ -1,5 +1,5 @@
 /* MOBILE FIRST */
-body{
+container{
     max-width: 300px;
     margin: auto;
 }
@@ -41,7 +41,7 @@ section{
     align-items: center;
 }
 @media (min-width:1024px){
-    body{
+    container{
         width: 100%
     }
     section{
@@ -52,7 +52,7 @@ section{
     }
 }
 @media (min-width:744px){
-    body{
+    container{
         width: 744px
     }
     .container-task{
