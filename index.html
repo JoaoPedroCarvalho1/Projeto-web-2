@@ -3,25 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./style.css" media="screen" />
-    <script src="./script.js" defer></script>
-    <title>Document</title>
+    <title>CheckList</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <div class="container">
+    <section>
         <div class="container-title">
-            <h1>CheckList</h1> <a href="./cadastro.html" type="button"
-                class="nes-btn is-primary btn-title">Cadastrar</a>
+            <h1>CheckList</h1> 
+            <button onclick="openModal()" id="new" class="nes-btn is-primary btn-">Incluir Atividade</i></button>
         </div>
-        <section>
-        </section>
-    </div>
+
+        <div class="divTable container-task nes-container is with-title">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atividade</th>
+                        <th>Descrição</th>
+                        <th>Data de Entrega</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal-container container-task">
+            <div class="modal">
+                <form>
+                    <div style=" padding: 1rem;" class="nes-field is-inline">
+                        <label for="dark_field m-nome">Atividade</label>
+                        <input id="m-nome" type="text" required id="dark_field" class="nes-input ">
+                    </div>
+
+                    <div style=" padding: 1rem;" class="nes-field is-inline">
+                        <label for="dark_field m-desc">Descrição</label>
+                        <input id="m-desc" type="text" id="dark_field" class="nes-input " required />
+                    </div>
+                    <div style=" padding: 1rem;" class="nes-field is-inline">
+                        <label for="m-data">Data de Entrega</label>
+                        <input id="m-data" type="date" id="dark_field" class="nes-input " required />
+                    </div>
+                    <button id="btnSalvar" class="nes-btn is-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 
 </html>

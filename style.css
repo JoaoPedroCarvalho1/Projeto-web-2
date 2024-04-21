@@ -1,61 +1,204 @@
-/* MOBILE FIRST */
-container{
-    max-width: 300px;
-    margin: auto;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
-section{
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 50px;
 }
-.nes-container.is-dark{
-    margin: 10px;
-}
-.container-title{
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-   align-items: center;
-   margin: 20px 0;
-}
-.btn-title{
-    width: 300px!important;
-}
-.container-task{
+
+.container-title {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     width: 100%;
-    gap:20px
+    margin: 20px 0;
 }
-.Subtitle{
-    font-size: 16px;
+
+.divTable {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    height: inherit;
+    overflow: auto;
+    width: 600px;
+}
+
+.divTable::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke;
+}
+
+.divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgray;
+}
+
+.nes-container {
+    border-width: 2px;
+}
+
+.nes-field.is-inline {
+    flex-direction: column;
     text-align: center;
 }
-.container_icons{
-    display: flex;
+
+td {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+}
+
+tbody tr {
+    margin-bottom: 50px;
+}
+
+thead tr th.acao {
+    width: 100px !important;
+    text-align: center;
+}
+
+tbody tr td.acao {
+    text-align: center;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
     align-items: center;
+    justify-content: center;
 }
-@media (min-width:1024px){
-    container{
-        width: 100%
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 10px;
+    width: 50%;
+}
+
+.modal label {
+    font-size: 16px;
+}
+
+.modal input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    width: 150%;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgb(189, 189, 189);
+}
+
+#btnSalvar {
+    width: 100%;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
     }
-    section{
-        flex-direction: row;
-    }
-    .container-task{
-        width: 744px;
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
-@media (min-width:744px){
-    container{
-        width: 744px
+
+td button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+td button i {
+    font-size: 25px;
+}
+
+td button i:first-child {
+    margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 10px;
     }
-    .container-task{
-        width: 500px;
+
+    .header span {
+        font-size: 15px;
+    }
+
+    #new {
+        padding: 5px;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .divTable {
+        width: 100%;
+    }
+
+    thead tr th.acao {
+        width: auto !important;
+    }
+
+    td button i {
+        font-size: 20px !important;
+    }
+
+    td button i:first-child {
+        margin-right: 0;
+    }
+
+    .modal {
+        width: 90% !important;
+    }
+
+    .modal label {
+        font-size: 12px !important;
     }
 }
